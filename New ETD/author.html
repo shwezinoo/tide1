@@ -1,0 +1,226 @@
+<!doctype html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Material Design Lite">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Authors</title>
+
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="materialize-v1.0.0-rc.2/mdl/material.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.min.css"/>
+   <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.css"/>
+   <script src="materialize-v1.0.0-rc.2/jquery.js"></script>
+    <style>
+	   .collection-item{
+	   font-family:Georgia, "Times New Roman", Times, serif;
+	   font-size:15px;
+	   color:black;
+	   
+   }
+   .mdl-navigation__link:hover{
+	   color:black;
+   }
+   #coll span{
+	   color:blue;
+	   text-decoration:underline;
+   }
+   .collection-item span{
+	   color:black;
+   }
+
+    </style>
+  </head>
+  <body class="grey lighten-4">
+  
+  
+  
+       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+      <header class="mdl-layout__header" style="background-color:#099;text-shadow:3px 3px 5px black;">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title" style="text-shadow:3px 3px 5px black;">Thesis & Dissertation</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right " style="background-color:#099;box-shadow:none;">
+            <a class="mdl-navigation__link" href="index.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Home</a>
+            <a class="mdl-navigation__link" href="author.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Authors</a>
+                        <a class="mdl-navigation__link" href="title.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Title</a>
+
+            <a class="mdl-navigation__link" href="latest.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Latest</a>
+            
+            <a class="mdl-navigation__link" href="search.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Search</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color:#146982;">
+                  <img class="mdl-logo" src="images/images/logo.jpg" style="margin:8px -18px auto;background-color:#069;" >
+             
+       
+        
+        </span>
+        <hr/>
+                <nav class="mdl-navigation" style="background-color:rgb(0,0,0,0);box-shadow:none;color:none;">
+         <a class="mdl-navigation__link" href="index.html" style="background-color:none;color:black;width:100%;">Home</a>
+          <a class="mdl-navigation__link" href="author.html" style="color:black;">Authors</a>
+           <a class="mdl-navigation__link" href="title.html" style="color:black;">Title</a>
+
+          <a class="mdl-navigation__link" href="latest.html" style="color:black;">Latest</a>
+          <a class="mdl-navigation__link" href="search.html" style="color:black;">Search</a>
+           <hr/>
+
+         
+
+        
+         
+        </nav>
+      </div>
+      
+   
+<main class="mdl-layout__content">
+    <div class="page-content"><a name="top"></a>
+    <div class="col s12" style="margin:0 30px auto;margin-bottom:50px;">
+  
+      <a name="top"></a>
+        <div class="row row-noclear">
+          <h3 class="header center-on-small-only">Browsing by Authors</h3>
+       
+  
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#coll .collection-item").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<div class="row">
+      <div class="col s12 m10 18"><span class="flow-text">
+                <i class="material-icons prefix">search</i>
+      <input class="form-control" id="myInput" type="text" placeholder="Search Authors..." style="margin-bottom:20px;width:250px;color:black;font-weight:bold;">
+
+
+      <div class="collection" id="coll">
+       
+        <a href="html/yeemontun.html" class="collection-item "><span>MA YEE MON HTUN</span></a>
+        <a href="html/MG MG WIN.html" class="collection-item"><span>MG MG WIN</span></a>
+        <a href="#!" class="collection-item"><span>OHMAR MYINT</span></a>
+        <a href="#!" class="collection-item" ><span>KHIN  KHIN OO</span></a>
+        <a href="#!" class="collection-item "><span>ZAR NI MG</span></a>
+        <a href="#!" class="collection-item"><span>THAN THIDA HNIN</span></a>
+        <a href="#!" class="collection-item"><span>ZIN YU MYINT</span></a>
+        <a href="#!" class="collection-item"><span>OHMAR MYINT</span></a>
+        <a href="#!" class="collection-item"><span>KHIN  KHIN OO</span></a>
+        <a href="#!" class="collection-item "><span>ZAR NI MG</span></a>
+        <a href="#!" class="collection-item"><span>THAN THIDA HNIN</span></a>
+        <a href="#!" class="collection-item"><span>ZIN YU MYINT</span></a>
+
+      </div></span>
+     
+
+      
+             <nav aria-label="Page navigation example grey lighten-2 hoverable" style="margin-top:40px;width:170px;height:40px;padding:5px;margin-bottom:30px;margin-left:10px;background-color:rgba(0,0,0,0.02);">
+  <ul class="pagination">
+    <li class="page-item previous-page"><a class="page-link" href="javascript:void(0)">&laquo;</a></li>
+    
+      </ul>
+      </nav>
+</div>
+      <div class="col s12 m4 l2">
+    
+      <span class="flow-text">
+    <p style="color:grey;">  Browse</p>
+      <div class="collection hoverable">
+    
+        <a href="latest.html" class="collection-item"><span>By Issue Date</span></a>
+        <a href="Author.html" class="collection-item "><span>Authors</span></a>
+        <a href="title.html" class="collection-item"><span>Titles</span></a>
+  
+      </div>
+     <p style="color:grey;"> My Account Login</p>
+      <div class="collection hoverable ">
+        <a href="login.html" class="collection-item"><span>Login</span></a>
+         <a href="register.html" class="collection-item"><span>Register</span></a>
+
+        
+      </span></div>
+    </div>
+               </div>
+            
+          
+        </div>        
+      </div>
+    <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                <i class="material-icons" style="color:white;" >arrow_upward</i>
+              </a>
+            </div>
+    
+ <footer class="page-footer" style="background-color:#333;">
+          <div class="container">
+            <div class="row">
+              <div class="col s6 m6 l3"><p><h5 class="white-text"><img src="images/35847167_165100634348381_4235292792756109312_n.jpg" width="100px" height="100px"/></h5>
+                <p class="grey-text text-lighten-4">CU(MDY) Thesis</p>
+            
+</p></div>
+
+              <div class="col s6 m6 l3"><p><h5 class="white-text">Features</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="author.html">Authors</a></li>
+                  <li><a class="grey-text text-lighten-3" href="title.html">Title</a></li>
+                  <li><a class="grey-text text-lighten-3" href="latest.html">Latest</a></li>
+                </ul>
+            
+</p></div>
+                               <div class="col s6 m6 l3"><p>
+                <h5 class="white-text">Details</h5>
+                <ul>
+                  
+                  <li><a class="grey-text text-lighten-3" href="history.html">History</a></li>
+                  <li><a class="grey-text text-lighten-3" href="about.html">About</a></li>
+                  <li><a class="grey-text text-lighten-3" href="skill.html">Skills</a></li>
+                </ul>
+                </p>
+              </div>
+               <div class="col s6 m6 l3"><p>
+                <h5 class="white-text">FAQ</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="faq.html">Questions</a></li>
+                  <li><a class="grey-text text-lighten-3" href="faq.html">Answers</a></li>
+                  
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 computer university mdy
+            <a class="grey-text text-lighten-4 right" href="#!">web designer by alpha group</a>
+            </div>
+          </div>
+        </footer>            </div>
+  </main>
+  </div>
+      
+  
+     <script src="pagination.js"></script>
+    
+    <script src="materialize-v1.0.0-rc.2/mdl/material.min.js"></script>
+    <script src="materialize-v1.0.0-rc.2/materialize/js/materialize.min.js"></script>
+    <script src="materialize-v1.0.0-rc.2/materialize/js/materialize.js"></script>
+  </body>
+</html>

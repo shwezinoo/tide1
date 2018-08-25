@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <!-- update the version number as needed -->
+    <script  src="/__/firebase/5.4.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script  src="/__/firebase/5.4.0/firebase-auth.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-database.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-messaging.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script  src="/__/firebase/init.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		
+ </head>
+  <body>
+  
+		<div><p> Adding desired year of Thesis paper to database </p>
+			
+			<label>No:	</label><input type="text" id="thesisIDCreate" placeholder="001"></input><br>
+			<label>Title:	</label><input type="text" id="thesisTitleCreate" ></input></br>
+			<label>Name:	</label><input type="text" id="thesisNameCreate" ></input></br>
+			<label>Degree:	</label><input type="text" id="thesisDegreeCreate" ></input></br>
+			<label>Supervisor:	</label><input type="text" id="thesisSupervisorCreate" ></input></br>
+			<label>Year:	</label><input type="text" id="thesisYearCreate" ></input></br>
+			<label>Abstract:	</label><textarea id="thesisAbstractCreate" ></textarea>
+			<button onclick="internsApp.Create()">Create</button>
+		</div>
+		<hr>
+		
+			<div>
+				<label>Year:	</label><input type="text" id="thesisYearUpdate" placeholder="2008"></input>
+				<label>ID:	</label><input type="text" id="thesisIDUpdate" placeholder="001"></input><br><br><br>
+				<label>Title:	</label><input type="text" id="thesisTitleUpdate" ></input>
+				<button onclick="internsApp.UpdateTitle()">UpdateTitle</button><br><br><br>
+				
+				<label>Name:	</label><input type="text" id="thesisNameUpdate" ></input>
+				<button onclick="internsApp.UpdateName()">UpdateName</button><br><br><br>
+				
+				<label>Degree:	</label><input type="text" id="thesisDegreeUpdate" ></input>
+				<button onclick="internsApp.UpdateDegree()">UpdateDegree</button><br><br><br>
+				
+				<label>Supervisor:	</label><input type="text" id="thesisSupervisorUpdate" ></input>
+				<button onclick="internsApp.UpdateSupervisor()">UpdateSupervisor</button><br><br><br>
+				
+				<label>Month&Year:	</label><input type="text" id="thesisMonthUpdate" placeholder="e.g. Aug-08"></input>
+				<button onclick="internsApp.UpdateYear()">Month&Year</button><br><br><br>
+				
+				<label>Abstract:	</label><textarea id="thesisAbstractUpdate" ></textarea>
+				<button onclick="internsApp.UpdateAbstract()">UpdateAbstract</button>
+				
+			</div>
+		<hr>
+		
+		<div>
+			<label>Year:	</label><input type="text" id="thesisYearDelete" placeholder="2008"></input>
+			<label>ID:	</label><input type="text" id="thesisIDDelete" placeholder="001"></input><br>
+			<button onclick="internsApp.Delete()">Delete</button>
+		</div>
+		<hr>
+		
+		<div>
+			<h6>Hello guys, you can see all the informations of your desired Year</h6>
+			<label>Year:	</label><input type="text" id="thesisYearRead" placeholder="2008"></input>
+			<button onclick="internsApp.Read()">Get Info</button>
+			<hr>
+			<table><thead><tr><td>ID</td><td>ThesisTitle</td><td>Name</td><td>Degree</td><td>SupervisorName</td><td>Year</td><td>AbstractThesis</td></tr></thead>
+					<tbody id="lstTable"></tbody>
+			</table>
+		</div>
+		<hr>
+		
+		<div>
+			<h6>Viewing data via user id</h6>
+			<label>Year:	</label><input type="text" id="thesisYear" placeholder="2008"></input>
+			<label>ID:	</label><input type="text" id="thesisID" placeholder="001"></input><br>
+			<button onclick="internsApp.ReadID()">Get Info</button>
+			<hr>
+			<table><thead><tr><td>ID</td><td>ThesisTitle</td><td>Name</td><td>Degree</td><td>SupervisorName</td><td>Year</td><td>AbstractThesis</td></tr></thead>
+					<tbody id="lstTable"><tr><td id="internIDResult">ID</td><td id="internTitleResult">Title</td><td id="internNameResult">Name</td><td id="internDegreeResult">Degree</td><td id="internSupervisorResult">Supervisor</td><td id="internYearResult">Year</td><td id="internAbstractResult">Abstract</td></tr></tbody>
+			</table>
+		</div>
+		
+  	<script src="app.js"></script>
+	<script src="lib.js"></script>
+	<script src="admin.js"></script>
+		
+ </body>
+</html>

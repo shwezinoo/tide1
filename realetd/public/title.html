@@ -1,0 +1,270 @@
+<!doctype html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Material Design Lite">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Titles</title>
+	
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="materialize-v1.0.0-rc.2/mdl/material.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.min.css"/>
+   <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.css"/>
+   <script src="materialize-v1.0.0-rc.2/jquery.js"></script>
+    <!-- update the version number as needed -->
+    <script  src="/__/firebase/5.4.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script  src="/__/firebase/5.4.0/firebase-auth.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-database.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-messaging.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script  src="/__/firebase/init.js"></script>
+    <style>
+td:last-child{
+	color:blue;
+	
+	}
+	th{
+	  display:none;
+	  font-size:20px;
+	  font-family:"Times New Roman", Times, serif;
+	  text-shadow:2px 2px 2px #CCCCCC;
+	}
+	td{
+		font-family:"Times New Roman", Times, serif;
+		font-size:17px;
+		font-style:normal;
+	}
+	
+	  th{
+	display:none;
+  }
+  td:first-child{
+		text-transform:capitalize;
+	}
+  </style>
+  </head>
+  <body class="grey lighten-4">
+  
+  
+  
+       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+      <header class="mdl-layout__header" style="background-color:#099;text-shadow:3px 3px 5px black;">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title" style="text-shadow:3px 3px 5px black;">Electronic Thesis & Dissertation</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right " style="background-color:#099;box-shadow:none;">
+            <a class="mdl-navigation__link" href="index.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Home</a>
+            <a class="mdl-navigation__link" href="author.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Authors</a>
+                        <a class="mdl-navigation__link" href="title.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Title</a>
+
+            <a class="mdl-navigation__link" href="latest.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Latest</a>
+            
+            <a class="mdl-navigation__link" href="search.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Search</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color:#146982;">
+                  <img class="mdl-logo" src="images/images/logo.jpg" style="margin:8px -18px auto;background-color:#069;" >
+             
+       
+        
+        </span>
+        <hr/>
+               <nav class="mdl-navigation" style="background-color:rgb(0,0,0,0);box-shadow:none;color:none;">
+                
+<a class="mdl-navigation__link" href="index.html" style="background-color:none;color:black;width:100%;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">account_balance</i></div>
+      <div class="col s6" style="margin-left:-45px;">Home</div></div></a>
+   
+          <a href="author.html" class="mdl-navigation__link" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-12px;">person_add</i></div>
+      <div class="col s6" style="margin-left:-45px;">Authors</div></div></a>
+          
+           <a class="mdl-navigation__link" href="title.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">format_size</i></div>
+      <div class="col s6" style="margin-left:-45px;">Title</div></div></a>
+
+          <a class="mdl-navigation__link" href="latest.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">grade</i></div>
+      <div class="col s6" style="margin-left:-45px;">Latest</div></div></a>
+          <a class="mdl-navigation__link" href="search.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">search</i></div>
+      <div class="col s6" style="margin-left:-45px;">Search</div></div></a>
+           <hr/>
+         <a class="mdl-navigation__link" href="search.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">person</i></div>
+      <div class="col s6" style="margin-left:-45px;">Admin</div></div></a>
+
+        
+         
+        </nav>
+      </div>
+      
+   
+<main class="mdl-layout__content">
+    <div class="page-content"><a name="top"></a>
+    <img src="images/images/r3.jpg" width="100%" />
+    <div class="col s12" style="margin:0 30px auto;margin-bottom:50px;">
+  
+      <a name="top"></a>
+        <div class="row row-noclear">
+		<!-- Simple Textfield -->
+        
+    <h4 style="text-shadow:1px 1px 1px black;font-family:'Times New Roman', Times, serif;margin-bottom:50px;margin-left:20px;"> Browsing by Title </h4>
+    
+    
+    <div class="row container" style="">
+    <div class="col s8 l4">
+    <div class="row">
+        <div class="col s1 l1">
+          <i class="material-icons" style="margin-top:15px;">search</i>
+          </div>
+          <div class="col s4 l5">
+        <input type="text" id="inputText" placeholder="Search ....." style="width:230px;"/>
+        </div>
+        </div>
+        </div>
+      <div class="col s5 l1"><button type="submit" onclick="titleSearch();" class="waves-effect waves-light btn">Submit</button></div>
+      </div>
+   
+		<!--<form action="#">
+		<div class="mdl-textfield mdl-js-textfield">
+		<label>Browse By Title...</label>
+		<input type="text" id="inputText"/>
+		<button type="submit" onclick="titleSearch();"> Submit</button><br>
+		
+		</div>
+        -->
+        
+     <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="images/images/logo1.jpg" alt="" class="circle"/>
+      <span class="title">Yee Mon Tun</span>
+      <p>"ONTOLOGY-BASED INFORMA-TION RETRIVAL SYSTEM"<br>
+         2008-Aug-08
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <img src="images/images/logo1.jpg" alt="" class="circle"/>
+      <span class="title">NWAY HNAUNG THEIN SWE</span>
+      <p>"KEYWORD-BASED DOCUMENT RETRIEVAL SYATEM"<br>
+         2009
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    
+    <li class="collection-item avatar">
+      <img src="images/images/logo1.jpg" alt="" class="circle"/>
+      <span class="title">Lin Thein</span>
+      <p style="text-transform:uppercase;">"Enhancing Workflow Management System By Using Etl Process" <br>
+         2010
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <img src="images/images/logo1.jpg" alt="" class="circle"/>
+      <span class="title">May Zin Oo</span>
+      <p style="text-transform:uppercase;">"Hierarchical Clustering for Fruits using Agglomerative Clustering" <br>
+         2011
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+  </ul>   
+        
+        
+		 <div class="row">
+		   <div class="col s12">
+		   <table>
+		   <thead id="hh">
+			<tr>
+				<th class="col l2">Name</th>
+				<th class="col l3">Title</th>
+				<th class="col l2">Year</th>
+				<th class="col l3">Abstract</th>
+				<th class="col l2">PDF</th>
+			</tr>
+			
+			</thead>
+			<tbody id="tt"></tbody>
+		   </table>
+		   </div>
+		   </div>
+		</form>
+               </div>
+            
+          
+        </div>        
+      </div>
+      
+    <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                <i class="material-icons" style="color:white;" >arrow_upward</i>
+              </a>
+            </div>
+    
+   
+       
+
+  <footer class="page-footer" style="background-color:#333;">
+          <div class="container">
+            <div class="row">
+              <div class="col s6 m6 l3"><p><h5 class="white-text"><img src="images/35847167_165100634348381_4235292792756109312_n.jpg" width="100px" height="100px"/></h5>
+                <p class="grey-text text-lighten-4">CU(MDY) Thesis</p>
+            
+</p></div>
+
+              <div class="col s6 m6 l3"><p><h5 class="white-text">Features</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="author.html">Authors</a></li>
+                  <li><a class="grey-text text-lighten-3" href="title.html">Title</a></li>
+                  <li><a class="grey-text text-lighten-3" href="latest.html">Latest</a></li>
+                </ul>
+            
+</p></div>
+                               <div class="col s6 m6 l3"><p>
+                <h5 class="white-text">Details</h5>
+                <ul>
+                  
+                  <li><a class="grey-text text-lighten-3" href="history.html">History</a></li>
+                  <li><a class="grey-text text-lighten-3" href="about.html">About</a></li>
+                  <li><a class="grey-text text-lighten-3" href="skill.html">Skills</a></li>
+                </ul>
+                </p>
+              </div>
+               <div class="col s6 m6 l3"><p>
+                <h5 class="white-text">FAQ</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="faq.html">Questions</a></li>
+                  <li><a class="grey-text text-lighten-3" href="faq.html">Answers</a></li>
+                  
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 computer university mdy
+            <a class="grey-text text-lighten-4 right" href="#!">web designer by alpha group</a>
+            </div>
+          </div>
+        </footer>
+  </main>
+</div>
+	<script src="js/title.js"></script>
+	<script src="pagination.js"></script>
+    
+    <script src="materialize-v1.0.0-rc.2/mdl/material.min.js"></script>
+    <script src="materialize-v1.0.0-rc.2/materialize/js/materialize.min.js"></script>
+    <script src="materialize-v1.0.0-rc.2/materialize/js/materialize.js"></script>
+  </body>
+</html>

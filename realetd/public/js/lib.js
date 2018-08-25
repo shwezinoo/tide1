@@ -326,7 +326,8 @@ var internsApp = {};
 	
 	//	READING ALL PAPERS FOR DESIRED YEAR	//
 	function fnRead()
-	{
+	{   
+	  
 		var year = $("#thesisYearRead").val();
 		//var uid = $("#thesisIDRead").val();
 		
@@ -368,6 +369,7 @@ var internsApp = {};
 			}
 			else{
 				snapShot.forEach(function (childSnapshot){
+					 $("#hh").show();
 					var key = childSnapshot.key;
 					var childData = childSnapshot.val();
 					var tr = '<tr>' + 
@@ -423,6 +425,7 @@ var internsApp = {};
 				console.log("No data found:");
 			}
 			else{
+				$("#yearid").show();
 				console.log(snapShot.val());
 				$("#internIDResult").html(uid);
 				$("#internTitleResult").html(snapShot.val().ThesisTitle);

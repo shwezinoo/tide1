@@ -1,0 +1,287 @@
+<!doctype html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Material Design Lite">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>AdminUpdate</title>
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="materialize-v1.0.0-rc.2/mdl/material.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.min.css"/>
+   <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.css"/>
+   <script src="materialize-v1.0.0-rc.2/jquery.js"></script>
+    <!-- update the version number as needed -->
+    <script  src="/__/firebase/5.4.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script  src="/__/firebase/5.4.0/firebase-auth.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-database.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-messaging.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script  src="/__/firebase/init.js"></script>
+    <style>
+	   
+		
+	
+    </style>
+  </head>
+  <body class="grey lighten-4">
+  
+  
+  
+       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+      <header class="mdl-layout__header" style="background-color:#099;text-shadow:3px 3px 5px black;">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title" style="text-shadow:3px 3px 5px black;">Electronic Thesis & Dissertation</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right " style="background-color:#099;box-shadow:none;">
+            <a class="mdl-navigation__link" href="index.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Home</a>
+            <a class="mdl-navigation__link" href="author.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Authors</a>
+                        <a class="mdl-navigation__link" href="title.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Title</a>
+
+            <a class="mdl-navigation__link" href="latest.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Latest</a>
+            
+            <a class="mdl-navigation__link" href="search.html" style="font-size:16px;font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic;">Search</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color:#146982;">
+                  <img class="mdl-logo" src="images/images/logo.jpg" style="margin:8px -18px auto;background-color:#069;" >
+             
+       
+        
+        </span>
+        <hr/>
+                <nav class="mdl-navigation" style="background-color:rgb(0,0,0,0);box-shadow:none;color:none;">
+                
+<a class="mdl-navigation__link" href="index.html" style="background-color:none;color:black;width:100%;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">account_balance</i></div>
+      <div class="col s6" style="margin-left:-45px;">Home</div></div></a>
+   
+          <a href="author.html" class="mdl-navigation__link" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-12px;">person_add</i></div>
+      <div class="col s6" style="margin-left:-45px;">Authors</div></div></a>
+          
+           <a class="mdl-navigation__link" href="title.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">format_size</i></div>
+      <div class="col s6" style="margin-left:-45px;">Title</div></div></a>
+
+          <a class="mdl-navigation__link" href="latest.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">grade</i></div>
+      <div class="col s6" style="margin-left:-45px;">Latest</div></div></a>
+          <a class="mdl-navigation__link" href="search.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">search</i></div>
+      <div class="col s6" style="margin-left:-45px;">Search</div></div></a>
+           <hr/>
+         <a class="mdl-navigation__link" href="search.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">person</i></div>
+      <div class="col s6" style="margin-left:-45px;">Admin</div></div></a>
+
+        
+         
+        </nav>
+      </div>
+	
+	<main class="mdl-layout__content">	
+     
+    <h4 style="text-shadow:1px 1px 1px black;font-family:'Times New Roman', Times, serif;margin-bottom:50px;margin-left:20px;text-align:center;">Update Members In Database </h4>
+    <a  href="adminchoose.html" class="waves-effect waves-light btn" style="margin-bottom:70px;margin-top:-40px;">back</a>
+        <div>
+             <div>
+             <div class="row"> 
+            <div class="row col s12 l3">
+			<div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;margin-top:10px;">Year:</div>
+			<div class="col s12 l10"><input type="text" id="thesisYearUpdate" placeholder="2008" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;margin-top:10px;">ID:</div>
+			<div class="col s12 l10"><input type="text" id="thesisIDUpdate" placeholder="001" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;margin-top:10px;">Title:</div>
+			<div class="col s12 l10"><input type="text" id="thesisTitleUpdate" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <button onclick="internsApp.UpdateTitle()" class="waves-effect waves-light btn">Update Title</button>
+            </div>
+            </div>
+            </div>
+            
+            <div class="clearfix"></div>
+            <!-- hr -->
+            <div class="row"> 
+            <div class="row col s12 l3">
+			<div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">Year:</div>
+			<div class="col s12 l10"><input type="text" id="thesisYearUpdate" placeholder="2008" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">ID:</div>
+			<div class="col s12 l10"><input type="text" id="thesisIDUpdate" placeholder="001" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l3" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">Degree:</div>
+			<div class="col s12 l9"><input type="text" id="thesisDegreeUpdate" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <button onclick="internsApp.UpdateDegree()" class="waves-effect waves-light btn">Update Degree</button>
+            </div>
+            </div>
+            </div>
+<div class="clearfix"></div>
+            <!--hr --> 
+            <div>
+             <div class="row"> 
+            <div class="row col s12 l3">
+			<div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">Year:</div>
+			<div class="col s12 l10"><input type="text" id="thesisYearUpdate" placeholder="2008" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">ID:</div>
+			<div class="col s12 l10"><input type="text" id="thesisIDUpdate" placeholder="001" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l3" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;
+            ">Name:</div>
+			<div class="col s12 l9"><input type="text" id="thesisNameUpdate" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <button onclick="internsApp.UpdateName()" class="waves-effect waves-light btn">Update Name</button>
+            </div>
+            </div>
+            </div>
+            <div>
+             <div class="row"> 
+            <div class="row col s12 l3">
+			<div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">Year:</div>
+			<div class="col s12 l10"><input type="text" id="thesisYearUpdate" placeholder="2008" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">ID:</div>
+			<div class="col s12 l10"><input type="text" id="thesisIDUpdate" placeholder="001" /></input></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l3" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">Super:
+            </div>
+			<div class="col s12 l9"><input type="text" id="thesisSupervisorUpdate" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <button onclick="internsApp.UpdateSupervisor()" class="waves-effect waves-light btn">Update Supervisor</button>
+            </div>
+            </div>
+            </div>
+
+                 <!-- hr -->
+              <div>
+             <div class="row"> 
+            <div class="row col s12 l3">
+			<div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">Year:</div>
+			<div class="col s12 l10"><input type="text" id="thesisYearUpdate" placeholder="2008" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">ID:</div>
+			<div class="col s12 l10"><input type="text" id="thesisIDUpdate" placeholder="001" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l3" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">M&amp;Y:</div>
+			<div class="col s12 l9"><input type="text" id="thesisMonthUpdate" placeholder="e.g. Aug-08" /></div>
+            </div>
+            <div class="row col s12 l3">
+           <button onclick="internsApp.UpdateYear()" class="waves-effect waves-light btn">Month&amp;Year </button>
+            </div>
+            </div>
+            </div>
+ <!--hr-->
+               <div>
+             <div class="row"> 
+            <div class="row col s12 l3">
+			<div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">Year:</div>
+			<div class="col s12 l10"><input type="text" id="thesisYearUpdate" placeholder="2008" /></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l2" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;">ID:</div>
+			<div class="col s12 l10"><input type="text" id="thesisIDUpdate" placeholder="001" /></input></div>
+            </div>
+            <div class="row col s12 l3">
+            <div class="col s12 l3" style="font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:20px;margin-top:10px;">Abstract:</div>
+			<div class="col s12 l9"><textarea id="thesisAbstractUpdate" ></textarea></div>
+            </div>
+            <div class="row col s12 l3">
+           <button onclick="internsApp.UpdateAbstract()" class="waves-effect waves-light btn">Update Abstract</button>
+            </div>
+            </div>
+            </div>
+    
+
+    
+ <div class="clearfix"></div>
+    
+    <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                <i class="material-icons"  style="color:white;">arrow_upward</i>
+              </a>
+            </div>
+  
+   
+	<footer class="page-footer" style="background-color:#333;">
+        <div class="container">
+            <div class="row">
+              <div class="col s6 m6 l3"><p><h5 class="white-text"><img src="images/35847167_165100634348381_4235292792756109312_n.jpg" width="100px" height="100px"/></h5>
+                <p class="grey-text text-lighten-4">CU(MDY) Thesis</p>
+				</p>
+			  </div>
+
+              <div class="col s6 m6 l3"><p><h5 class="white-text">Features</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="author.html">Authors</a></li>
+                  <li><a class="grey-text text-lighten-3" href="title.html">Title</a></li>
+                  <li><a class="grey-text text-lighten-3" href="latest.html">Latest</a></li>
+                </ul>
+            
+</p></div>
+                               <div class="col s6 m6 l3"><p>
+                <h5 class="white-text">Details</h5>
+                <ul>
+                  
+                  <li><a class="grey-text text-lighten-3" href="history.html">History</a></li>
+                  <li><a class="grey-text text-lighten-3" href="about.html">About</a></li>
+                  <li><a class="grey-text text-lighten-3" href="skill.html">Skills</a></li>
+                </ul>
+                </p>
+              </div>
+               <div class="col s6 m6 l3"><p>
+                <h5 class="white-text">FAQ</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="faq.html">Questions</a></li>
+                  <li><a class="grey-text text-lighten-3" href="faq.html">Answers</a></li>
+                  
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 computer university mdy
+            <a class="grey-text text-lighten-4 right" href="#!">web designer by alpha group</a>
+            </div>
+          </div>
+         </footer>
+   
+   </div>
+  </main>
+  </div>
+ 
+  	<script src="js/app.js"></script>
+	<script src="js/lib.js"></script>
+	<script src="js/admin.js"></script>
+    <script src="materialize-v1.0.0-rc.2/mdl/material.min.js"></script>
+    <script src="materialize-v1.0.0-rc.2/materialize/js/materialize.min.js"></script>
+    <script src="materialize-v1.0.0-rc.2/materialize/js/materialize.js"></script>
+  </body>
+</html>

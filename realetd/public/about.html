@@ -17,18 +17,12 @@
     <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.min.css"/>
    <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.css"/>
    <script src="materialize-v1.0.0-rc.2/jquery.js"></script>
-    <style>
-	   .collection-item{
-	   font-family:Georgia, "Times New Roman", Times, serif;
-	   font-size:15px;
-	   font-style:italic;
-   }
-   .mdl-navigation__link:hover{
-	   color:black;
-   }
-
-
-    </style>
+   <style>
+    li{
+		font-family:"Times New Roman", Times, serif;
+		font-size:18px;
+	}
+   </style>
   </head>
   <body class="grey lighten-4">
   
@@ -39,7 +33,7 @@
       <header class="mdl-layout__header" style="background-color:#099;text-shadow:3px 3px 5px black;">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title" style="text-shadow:3px 3px 5px black;">Thesis & Dissertation</span>
+          <span class="mdl-layout-title" style="text-shadow:3px 3px 5px black;">Electronic Thesis & Dissertation</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
@@ -62,21 +56,29 @@
         
         </span>
         <hr/>
-                <nav class="mdl-navigation" style="background-color:rgb(0,0,0,0);box-shadow:none;color:none;">
-         <a class="mdl-navigation__link" href="index.html" style="background-color:none;color:black;width:100%;">Home</a>
-          <a class="mdl-navigation__link" href="author.html" style="color:black;">Authors</a>
-           <a class="mdl-navigation__link" href="title.html" style="color:black;">Title</a>
+<nav class="mdl-navigation" style="background-color:rgb(0,0,0,0);box-shadow:none;color:none;">
+                
+<a class="mdl-navigation__link" href="index.html" style="background-color:none;color:black;width:100%;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">account_balance</i></div>
+      <div class="col s6" style="margin-left:-45px;">Home</div></div></a>
+   
+          <a href="author.html" class="mdl-navigation__link" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-12px;">person_add</i></div>
+      <div class="col s6" style="margin-left:-45px;">Authors</div></div></a>
+          
+           <a class="mdl-navigation__link" href="title.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">format_size</i></div>
+      <div class="col s6" style="margin-left:-45px;">Title</div></div></a>
 
-          <a class="mdl-navigation__link" href="latest.html" style="color:black;">Latest</a>
-          <a class="mdl-navigation__link" href="search.html" style="color:black;">Search</a>
+          <a class="mdl-navigation__link" href="latest.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">grade</i></div>
+      <div class="col s6" style="margin-left:-45px;">Latest</div></div></a>
+          <a class="mdl-navigation__link" href="search.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">search</i></div>
+      <div class="col s6" style="margin-left:-45px;">Search</div></div></a>
            <hr/>
-
-         
+         <a class="mdl-navigation__link" href="login.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">person</i></div>
+      <div class="col s6" style="margin-left:-45px;">Admin</div></div></a>
 
         
          
         </nav>
-      </div>
+              </div>
       
    
 <main class="mdl-layout__content">

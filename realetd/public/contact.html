@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Material Design Lite">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>History</title>
+    <title>Contact</title>
 
     
     
@@ -17,6 +17,16 @@
     <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.min.css"/>
    <link rel="stylesheet" href="materialize-v1.0.0-rc.2/materialize/css/materialize.css"/>
    <script src="materialize-v1.0.0-rc.2/jquery.js"></script>
+   <script src="materialize-v1.0.0-rc.2/jquery.js"></script>
+    <!-- update the version number as needed -->
+    <script  src="/__/firebase/5.4.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script  src="/__/firebase/5.4.0/firebase-auth.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-database.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-messaging.js"></script>
+    <script  src="/__/firebase/5.4.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script  src="/__/firebase/init.js"></script>
     <style>
 	   .collection-item{
 	   font-family:Georgia, "Times New Roman", Times, serif;
@@ -27,6 +37,10 @@
 	   color:black;
    }
 
+   li{
+		font-family:"Times New Roman", Times, serif;
+		font-size:18px;
+	}
 
     </style>
   </head>
@@ -38,7 +52,7 @@
       <header class="mdl-layout__header" style="background-color:#099;text-shadow:3px 3px 5px black;">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title" style="text-shadow:3px 3px 5px black;">Thesis & Dissertation</span>
+          <span class="mdl-layout-title" style="text-shadow:3px 3px 5px black;">Electronic Thesis & Dissertation</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
@@ -61,16 +75,24 @@
         
         </span>
         <hr/>
-                <nav class="mdl-navigation" style="background-color:rgb(0,0,0,0);box-shadow:none;color:none;">
-         <a class="mdl-navigation__link" href="index.html" style="background-color:none;color:black;width:100%;">Home</a>
-          <a class="mdl-navigation__link" href="author.html" style="color:black;">Authors</a>
-           <a class="mdl-navigation__link" href="title.html" style="color:black;">Title</a>
+               <nav class="mdl-navigation" style="background-color:rgb(0,0,0,0);box-shadow:none;color:none;">
+                
+<a class="mdl-navigation__link" href="index.html" style="background-color:none;color:black;width:100%;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">account_balance</i></div>
+      <div class="col s6" style="margin-left:-45px;">Home</div></div></a>
+   
+          <a href="author.html" class="mdl-navigation__link" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-12px;">person_add</i></div>
+      <div class="col s6" style="margin-left:-45px;">Authors</div></div></a>
+          
+           <a class="mdl-navigation__link" href="title.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">format_size</i></div>
+      <div class="col s6" style="margin-left:-45px;">Title</div></div></a>
 
-          <a class="mdl-navigation__link" href="latest.html" style="color:black;">Latest</a>
-          <a class="mdl-navigation__link" href="search.html" style="color:black;">Search</a>
+          <a class="mdl-navigation__link" href="latest.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">grade</i></div>
+      <div class="col s6" style="margin-left:-45px;">Latest</div></div></a>
+          <a class="mdl-navigation__link" href="search.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">search</i></div>
+      <div class="col s6" style="margin-left:-45px;">Search</div></div></a>
            <hr/>
-
-         
+         <a class="mdl-navigation__link" href="login.html" style="color:black;height:60px;margin-bottom:10px;"><div class="row" style="padding:0;"><div class="col s6"><i class="material-icons" style="margin-top:-17px;margin-left:-10px;">person</i></div>
+      <div class="col s6" style="margin-left:-45px;">Admin</div></div></a>
 
         
          
@@ -88,23 +110,24 @@
     <i class="material-icons">email</i>kyawzwasoe@gmail.com
     
     
+    
     <div class="container hoverable" style="border:2px solid black;box-shadow:2px 3px 5px grey;margin-top:30px;padding:30px;">
    
  
    
       <div class="row">
-      <div class="col s6 center-align"><span style="font-size:25px;margin-top:20px;font-family:Georgia, 'Times New Roman', Times, serif;">Full Name</span></div>
-      <div class="col s6"><i class="material-icons">person<input type="text" placeholder="name..."/></i></div>
+      <div class="col s6 center-align"><span style="font-size:25px;margin-top:20px;font-family:Georgia, 'Times New Roman', Times, serif;" >Full Name</span></div>
+      <div class="col s6"><i class="material-icons">person<input type="text"  id="fullName" placeholder="name..."/></i></div>
         
         </div>
          <div class="row">
-      <div class="col s6 center-align"><span style="font-size:25px;margin-top:20px;font-family:Georgia, 'Times New Roman', Times, serif;">Email</span></div>
-      <div class="col s6"><i class="material-icons">email<input type="email" placeholder="email number..."/></i></div>
+      <div class="col s6 center-align"><span style="font-size:25px;margin-top:20px;font-family:Georgia, 'Times New Roman', Times, serif;" >Email</span></div>
+      <div class="col s6"><i class="material-icons">email<input type="email" id="email1" placeholder="email number..."/></i></div>
         
         </div>
        
       <div class="row">
-      <div class="col s6 center-align"><span style="font-size:25px;margin-top:20px;font-family:Georgia, 'Times New Roman', Times, serif;">Message</span></div>
+      <div class="col s6 center-align"><span style="font-size:25px;margin-top:20px;font-family:Georgia, 'Times New Roman', Times, serif;" >Message</span></div>
       <div class="col s6">
          <i class=" material-icons">create <textarea id="textarea1" class="materialize-textarea" placeholder="messages"></textarea></i>
          
@@ -115,19 +138,11 @@
                 
         <div class="row">
       <div class="col s6"></div>
-      <div class="col s6"><a class="waves-effect waves-light btn" style="margin-top:30px;">Sent</a></div>
+      <div class="col s6"><button class="waves-effect waves-light btn" style="margin-top:30px;" onclick="internsApp.CreateContact()">Sent</button></div>
         
         </div>
-       
-
-       
-      
-
-    
-  
-
-</div>
-</div>      
+        </div>
+        </div>      
 
      
     
@@ -191,7 +206,10 @@
       
   
      
-    
+    <script src="js/app.js"></script>
+	<script src="js/lib.js"></script>
+     
+
     <script src="materialize-v1.0.0-rc.2/mdl/material.min.js"></script>
     <script src="materialize-v1.0.0-rc.2/materialize/js/materialize.min.js"></script>
     <script src="materialize-v1.0.0-rc.2/materialize/js/materialize.js"></script>

@@ -1,5 +1,16 @@
 fb = {};
 fb = firebase;
+function fnCreateQuestion(path, body, callBack){
+	if(!path || !body) return;
+	fb.database().ref(path).set(body, callBack);
+}
+
+
+function fnCreateContact(path, body, callBack){
+	if(!path || !body) return;
+	fb.database().ref(path).set(body, callBack);
+}
+
 
 function fnCreate(path, body, callBack){
 	if(!path || !body) return;
@@ -61,6 +72,9 @@ function fnDelete(path, callBack){
 
 fb.data = {
 	create: fnCreate,
+	createContact: fnCreateContact,
+	createQuestion: fnCreateQuestion,
+	
 	read: fnRead,
 	
 	updateTitle: fnUpdateTitle,

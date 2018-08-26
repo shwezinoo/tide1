@@ -22,7 +22,37 @@ var internsApp = {};
 			console.log("success");
 		}
 	}
+	
+	//CREATING CONTACT//
+	function fnCreateContact(){
+		var fullName = $("#fullName").val();
+		var email = $("#email1").val();
+		var message = $("#textarea1").val();
+		var path='ContactUs/' + 1;
+		var data = {
+			
+			FullName: fullName,
+			Email: email,
+			Message: message
+		}
+		fb.data.createContact(path, data, messageHandler);
+	}
+	
+	//CREATING QUESTION//
+	function fnCreateQuestion(){
+		var qqName = $("#qname").val();
+		var qqFeedback = $("#qfeedback").val();
+		var qqEmail = $("#qemail").val();
 		
+		var path='QuestionSection/' + 1;
+		var data = {
+			
+			UserName: qqName,
+			UserFeedback: qqFeedback,
+			UserEmail: qqEmail
+		}
+		fb.data.createQuestion(path, data, messageHandler);
+	}
 	//	CREATING PAPERS	//
 	function fnCreate(){
 		uid = $('#thesisIDCreate').val();
@@ -103,9 +133,24 @@ var internsApp = {};
 		else if(year == 2017){
 			var path='2017/'+uid;
 		}
-		else{
+		else if(year == 2018){
 			var path='2018/'+uid;
-		}		
+		}
+		else if(year == 2019){
+			var path='2019/' + uid;
+		}
+		else if(year == 2020){
+			var path='2020/' + uid;
+		}
+		else if(year == 2021){
+			var path='2021/' + uid;
+		}
+		else if(year == 2022){
+			var path='2022/' + uid;
+		}
+		else {
+			var path='2023/' + uid;
+		}
 		fb.data.updateTitle(path, data, messageHandler);
 	}
 	
@@ -146,8 +191,23 @@ var internsApp = {};
 		else if(year == 2017){
 			var path='2017/'+uid;
 		}
-		else{
+		else if(year == 2018){
 			var path='2018/'+uid;
+		}
+		else if(year == 2019){
+			var path='2019/' + uid;
+		}
+		else if(year == 2020){
+			var path='2020/' + uid;
+		}
+		else if(year == 2021){
+			var path='2021/' + uid;
+		}
+		else if(year == 2022){
+			var path='2022/' + uid;
+		}
+		else {
+			var path='2023/' + uid;
 		}
 		fb.data.updateName(path, data, messageHandler);
 	}
@@ -189,8 +249,23 @@ var internsApp = {};
 		else if(year == 2017){
 			var path='2017/'+uid;
 		}
-		else{
+		else if(year == 2018){
 			var path='2018/'+uid;
+		}
+		else if(year == 2019){
+			var path='2019/' + uid;
+		}
+		else if(year == 2020){
+			var path='2020/' + uid;
+		}
+		else if(year == 2021){
+			var path='2021/' + uid;
+		}
+		else if(year == 2022){
+			var path='2022/' + uid;
+		}
+		else {
+			var path='2023/' + uid;
 		}
 		fb.data.updateDegree(path, data, messageHandler);
 	}
@@ -229,11 +304,26 @@ var internsApp = {};
 		else if (year ==2016){
 			var path='2016/' + uid;
 		}
-		else if(year ==2017){
+		else if(year == 2017){
 			var path='2017/'+uid;
 		}
-		else{
+		else if(year === 2018){
 			var path='2018/'+uid;
+		}
+		else if(year == 2019){
+			var path='2019/' + uid;
+		}
+		else if(year == 2020){
+			var path='2020/' + uid;
+		}
+		else if(year == 2021){
+			var path='2021/' + uid;
+		}
+		else if(year == 2022){
+			var path='2022/' + uid;
+		}
+		else {
+			var path='2023/' + uid;
 		}
 		fb.data.updateSupervisor(path, data, messageHandler);
 	}
@@ -272,11 +362,26 @@ var internsApp = {};
 		else if (year ==2016){
 			var path='2016/' + uid;
 		}
-		else if(year ==2017){
+		else if(year == 2017){
 			var path='2017/'+uid;
 		}
-		else{
+		else if(year == 2018){
 			var path='2018/'+uid;
+		}
+		else if(year == 2019){
+			var path='2019/' + uid;
+		}
+		else if(year == 2020){
+			var path='2020/' + uid;
+		}
+		else if(year == 2021){
+			var path='2021/' + uid;
+		}
+		else if(year == 2022){
+			var path='2022/' + uid;
+		}
+		else {
+			var path='2023/' + uid;
 		}
 		fb.data.updateYear(path, data, messageHandler);
 	}
@@ -318,8 +423,23 @@ var internsApp = {};
 		else if(year == 2017){
 			var path='2017/'+uid;
 		}
-		else{
+		else if(year == 2018){
 			var path='2018/'+uid;
+		}
+		else if(year == 2019){
+			var path='2019/' + uid;
+		}
+		else if(year == 2020){
+			var path='2020/' + uid;
+		}
+		else if(year == 2021){
+			var path='2021/' + uid;
+		}
+		else if(year == 2022){
+			var path='2022/' + uid;
+		}
+		else {
+			var path='2023/' + uid;
 		}
 		fb.data.updateAbstract(path, data, messageHandler);
 	}
@@ -358,10 +478,24 @@ var internsApp = {};
 		else if(year ==2017){
 			var path='2017/';
 		}
-		else{
+		else if(year == 2018){
 			var path='2018/';
 		}
-		
+		else if(year == 2019){
+			var path='2019/' ;
+		}
+		else if(year == 2020){
+			var path='2020/' ;
+		}
+		else if(year == 2021){
+			var path='2021/' ;
+		}
+		else if(year == 2022){
+			var path='2022/' ;
+		}
+		else {
+			var path='2023/' ;
+		}
 		fb.data.read(path, successFn, messageHandler);
 		function successFn(snapShot){
 			if(!snapShot){
@@ -416,8 +550,29 @@ var internsApp = {};
 		else if(year == 2015){
 			var path='2015/' + uid;
 		}
-		else {
+		else if(year == 2016){
 			var path='2016/' + uid;
+		}
+		else if(year ==2017){
+			var path='2017/' + uid;
+		}
+		else if(year == 2018){
+			var path='2018/' + uid;
+		}
+		else if(year == 2019){
+			var path='2019/' + uid;
+		}
+		else if(year == 2020){
+			var path='2020/' + uid;
+		}
+		else if(year == 2021){
+			var path='2021/' + uid;
+		}
+		else if(year == 2022){
+			var path='2022/' + uid;
+		}
+		else {
+			var path='2023/' + uid;
 		}
 		fb.data.readid(path, successFn, messageHandler);
 		function successFn(snapShot){
@@ -470,16 +625,32 @@ var internsApp = {};
 			var path='2016/' + uid;
 		}
 		else if(year ==2017){
-			var path='2017/'+uid;
+			var path='2017/' + uid;
 		}
-		else{
-			var path='2018/'+uid;
+		else if(year == 2018){
+			var path='2018/' + uid;
 		}
-		
+		else if(year == 2019){
+			var path='2019/' + uid;
+		}
+		else if(year == 2020){
+			var path='2020/' + uid;
+		}
+		else if(year == 2021){
+			var path='2021/' + uid;
+		}
+		else if(year == 2022){
+			var path='2022/' + uid;
+		}
+		else {
+			var path='2023/' + uid;
+		}
 		fb.data.delete(path, messageHandler);
 	}
 
 	internsApp.Create = fnCreate;
+	internsApp.CreateContact = fnCreateContact;
+	internsApp.CreateQuestion = fnCreateQuestion;
 	internsApp.Read	= fnRead;
 	
 	internsApp.UpdateTitle = fnUpdateTitle;
